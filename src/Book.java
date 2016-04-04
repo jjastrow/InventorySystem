@@ -5,7 +5,7 @@ class Book{
     String name;
     BookType type;
 
-    public static enum BookType{ Satire, Fiction, NonFiction, Romance, Mystery, Drama, SelfHelp}
+    public static enum BookType{ Satire, Fiction, Romance, Mystery, Drama }
 
     public Book() {
     }
@@ -23,14 +23,14 @@ class Book{
     }
 
     public static Book requestBook(){
-        System.out.println("Enter book name: ");
+        System.out.print("Enter book name: ");
         String name = InventorySystem.scanner.nextLine();
 
         int i = 1;
         for (BookType t : BookType.values()){
             System.out.println( String.format("%s - %s", i++, t) );
         }
-        System.out.println("\nEnter type of book: ");
+        System.out.print("Enter type of book: ");
         String typeString = InventorySystem.scanner.nextLine();
         int typeIndex = Integer.parseInt(typeString);
 

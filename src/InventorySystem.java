@@ -24,15 +24,20 @@ public class InventorySystem {
         System.out.println("Let's add some more inventory...");
 
         while (true) {
-            System.out.println("\n...More items to [A]dd or [D]isplay all then add, or [Q]uit? ");
+            System.out.println("\n...More items to [A]dd, [R]emore, [U]pdate, or [D]isplay all then add, or [Q]uit? ");
             switch (InventorySystem.scanner.nextLine().toUpperCase()) {
                 case "A": {
                     items.addToStock(InventoryItem.requestNewItem());
                     continue;
                 }
                 case "D": {
-                    items.display();
-                    continue;
+                    items.display(); continue;
+                }
+                case "R": {
+                    items.removeStock(); continue;
+                }
+                case "U": {
+                    items.updateStock(); continue;
                 }
                 case "Q": return;
                 default:;

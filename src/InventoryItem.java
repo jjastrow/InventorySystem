@@ -19,16 +19,16 @@ class InventoryItem {
     public static InventoryItem requestNewItem(){
         InventoryItem item = new InventoryItem();
 
-        System.out.println("Enter Stock Number: ");
+        System.out.print("Enter Stock Number: ");
         String stock = InventorySystem.scanner.nextLine();
         item.setStockNumber(Integer.parseInt(stock));
         item.setBook(Book.requestBook());
 
-        System.out.println("Enter quantity: ");
+        System.out.print("Enter quantity: ");
         String qty = InventorySystem.scanner.nextLine();
         item.setQuantity(Integer.parseInt(qty));
 
-        System.out.println("Enter location of stock item: ");
+        System.out.print("Enter location of stock item: ");
         item.setLocation(InventorySystem.scanner.nextLine());
 
         return item;
